@@ -88,6 +88,7 @@ ENDIF
 Snap    PROC    FAR
 
         INVOKE  GetVidConfig            ; Get video information
+;;; In snap_common.asm
 
         mov     al, vconfig.mode        ; AL = video mode
         .IF     (al <= 3) || (al == 7)  ; If text mode:
